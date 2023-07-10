@@ -7,6 +7,9 @@ Once the macro is used, Themida will produce the following procedures:
 1. Virtual Machine(VM) Entry (Store existing register values onto the stack, increment lock value in VM context and proceed to jmp to VM handler)
 1. VM will proceed to call VirtualAlloc with .text section size, size is retrieved within .themida section
 1. I assumed memcpy was used, generating the "repe movsb" instructions, this will copy the .text section to the memory block given by VirtualAlloc
+   
+    ![](/Images/Screenshot1.jpg)
+   
 1. Calculate CRC value using the memory block allocated by VirtualAlloc
 1. VirtualFree the memory block
 1. Original CRC is read from .themida section, compared against calculated CRC and proceeded to assign the variable value if CRC matches 
