@@ -1,5 +1,7 @@
 # Themida V3.x.x Cyclic Redundancy Check Bypass
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](../LICENSE.md)
 
+## Introduction
 Themida by Oreans is one of the popular software protectors that is known to keep an attacker from reverse engineering a compiled application. One of their feature, particularly CHECK_CODE_INTEGRITY macro, fallshort on WINAPI based bypass. This project is a Prove of Concept(PoC) of an attack vector via WinAPI with no modifications to their CHECK_CODE_INTEGRITY virtual routine. 
 
 ## How it works
@@ -21,5 +23,5 @@ As shown in the PoC code, after the memory allocation block is given, the origin
 
 A Vector Exception Handler is added to handle that Access Violation, by modifying the RIP register to skip over the instruction.
 
-## Disclaimer
+## Disclaimer :warning:
 **This project is strictly for educational purposes. It is not intended to be a ready-to-be-used library or an attack on the company's products.**
